@@ -1,0 +1,82 @@
+package com.student_registration.accept_input;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class EmployeeRegistrationAccept
+ */
+@WebServlet("/EmployeeRegistrationAccept")
+public class EmployeeRegistrationAccept extends HttpServlet {
+	private static final long serialVersionUID = 1L; 
+	FileInputStream fis = null;
+
+    /**
+     * Default constructor. 
+     */
+    public EmployeeRegistrationAccept() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+    @Override
+    public void init() throws ServletException {
+    	try {
+			fis = new FileInputStream("D:\\Student Registration\\Student Management\\configuration.properties");
+			Properties properties = new Properties();
+			properties.load(fis);
+			String url = properties.getProperty("url");
+			String username = properties.getProperty("username");
+			String password = properties.getProperty("password");
+			System.out.println(url);
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    	
+    }
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String eid = request.getParameter("employee_id");
+		int employee_id = Integer.parseInt(eid);
+		String firstname = request.getParameter("firstname");
+		String lastname = request.getParameter("lastname");
+		String email = request.getParameter("email");
+		String city = request.getParameter("city");
+		String mobile_number = request.getParameter("mobile_number");
+		String dob = request.getParameter("dob");
+		String gender = request.getParameter("gender");
+		String department = request.getParameter("department");
+		String year_of_joining = request.getParameter("year_of_joining");
+		String passout_year = request.getParameter("passout_year");
+		String password = request.getParameter("password");
+		
+		
+		
+		String query = "INSERT INTO employee_table (`employee_id`,`firstname`,`lastname`,`email`,`city`,`mobile_number`,`dob`,`gender`,`department`,`year_of_joining`,`passout_year`,`password`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
+		
+		query.setInt(1,employee_id);
+		
+	}
+
+}

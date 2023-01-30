@@ -1,0 +1,52 @@
+package com.student_registration.accept_input;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class EmployeeRegistrationAccept
+ */
+@WebServlet("/EmployeeRegistrationAccept")
+public class EmployeeRegistrationAccept extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    /**
+     * Default constructor. 
+     */
+    public EmployeeRegistrationAccept() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String eid = request.getParameter("employee_id");
+		String firstname = request.getParameter("firstname");
+		String lastname = request.getParameter("lastname");
+		String email = request.getParameter("email");
+		String city = request.getParameter("city");
+		String mobile_number = request.getParameter("mobile_number");
+		String dob = request.getParameter("dob");
+		String gender = request.getParameter("gender");
+		String department = request.getParameter("department");
+		String year_of_joining = request.getParameter("year_of_joining");
+		String passout_year = request.getParameter("passout_year");
+		String password = request.getParameter("password");
+		
+	}
+
+}

@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE jsp>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="col-12">
+        <h1>Student Registration</h1>
+    </div>
+    <div>
+<nav class="navbar navbar-expand-lg custom-navbar-css col-12">
+            <div class="container-fluid">
+              <a class="navbar-brand nav-logo" href="#"><img src="https://www.loccsd.ca/file/28219856/46301332/29668585/orig" alt="nav-logo" class="img-fluid" height="40px" width="40spx"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav custom-navbar-anchor-div-css">
+                  <a class="nav-link custom-navbar-anchor-element-css" id="" style="background-color:rgb(200,200,120);border-radius:10px;" aria-current="page" href="home2.jsp">Home</a>
+                  <a class="nav-link custom-navbar-anchor-element-css" href="employee2_login.jsp">Employee Login</a>
+                  <a class="nav-link custom-navbar-anchor-element-css" href="employee_registration_form.jsp">Employee Registration</a>
+                  <a class="nav-link custom-navbar-anchor-element-css" href="student_registration_form.jsp">Student Registration</a>
+                  <a class="nav-link custom-navbar-anchor-element-css" href="modify.jsp">Modify</a>
+                  
+                </div>
+              </div>
+            </div>
+          </nav>
+          </div>
+</body>
+</html>

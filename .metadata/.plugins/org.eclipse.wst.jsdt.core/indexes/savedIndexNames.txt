@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+D:\Student Registration\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1077712589.index
+811169121.index
+558060566.index
+3599361032.index
+1717677946.index
+964789882.index
+2268575837.index
